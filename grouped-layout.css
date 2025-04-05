@@ -1,0 +1,36 @@
+.generate-input {
+  display: block;
+  width: 50vw;
+  font-size: 25px;
+}
+
+.generate-btn {
+  font-size: 28px;
+  background: transparent;
+  color: darkgreen;
+}
+
+.grouped-input-table {
+  color: maroon;
+  font-size: 30px;
+  border-collapse: collapse;
+  width: 100vw;
+}
+
+.grouped-input-table th, .grouped-input-table td {
+  border: 2px solid black;
+}
+
+.grouped-calc-btn {
+  color: blue;
+}
+
+.grouped-table {
+  color:black;
+  border-collapse: collapse;
+  font-size: 30px;
+}
+
+.grouped-table th, .grouped-table td {
+  border: 2px solid black;
+}

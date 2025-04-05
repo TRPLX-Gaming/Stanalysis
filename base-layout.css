@@ -1,0 +1,93 @@
+:root {
+  --h-height:8%
+  --text-size:25px;
+}
+@media only screen and (orientation: landscape ) {
+  :root {
+    --h-height:15%;
+    --text-size:15px
+  }
+}
+@media only screen and (orientation: portrait) {
+  :root {
+    --h-height:10%;
+    --text-size:25px;
+  }
+}
+body {
+  overflow: hidden;
+  color: cyan;
+}
+.menu-btn {
+  background-color:navy;
+  position: fixed;
+  width:20%;
+  font-size:100%;
+  color:white;
+  top:0;
+  left:0;
+  height:var(--h-height);
+}
+.menu:hover {
+  width:50%;
+  opacity:1;
+}
+.menu:hover ~ .title, .menu:hover ~ .body {
+  width:50%;
+  left:50%;
+}
+.menu {
+  background-color:navy;
+  width:0;
+  display:flex;
+  justify-content:flex-start;
+  position:fixed;
+  top:0;
+  left:0;
+  color:white;
+  font-size:100%;
+  opacity:0;
+  transition:width 1s, opacity 1.1s;
+}
+.menu .menu-item {
+  margin:0;
+  margin-bottom:20px;
+  transition:background-color .5s;
+}
+.menu-items {
+  list-style-type: none;
+}
+.menu-items h1::before {
+  content: '> ';
+}
+.menu-item:hover {
+  background-color:maroon;
+}
+.menu-item:nth-child(1):hover, .menu-item:nth-child(2):hover, .menu-item:nth-child(3):hover {
+  background-color: lime;
+}
+.title {
+  background-color: red;
+  position:fixed;
+  width:100%;
+  top:0;
+  left:20%;
+  height: var(--h-height);
+  color:white;
+  transition:width .8s, left .8s;
+}
+.title h1 {
+  font-size: var(--text-size);
+}
+.body {
+  background-color:darkgreen;
+  position:fixed;
+  overflow: auto;
+  width:100%;
+  top:var(--h-height);
+  left:0;
+  height: calc(100vh - var(--h-height));
+  color:white;
+  transition:width .8s, left .8s;
+}
+
